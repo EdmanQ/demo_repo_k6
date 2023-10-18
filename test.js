@@ -13,10 +13,8 @@ export const options = {
 
 export default function () {
 
-  const res = http.get('http://test.k6.io');
+  const res = http.get('https://swapi.dev/api/people/2');
   check(res, { 'status was 200': (r) => r.status == 200 });
   sleep(1);
-
   
-
 }
